@@ -1,34 +1,36 @@
 def up(p):
     p += complex(0,1)
     return p
-
 def down(p):
     p += complex(0,-1)
     return p
-
 def right(p):
     p += complex(1,0)
     return p
-
 def left(p):
     p += complex(-1,0)
     return p
 
-position = complex(0, 0)
+print(""" INPUT KEY
+w - up
+s - down
+d - right
+a - left
+q - exit""")
 
-value = int(input())
+position = complex(1, 0)
 
-while value<= 4:
-    if value== 1:
+while True:
+    value = input()
+    if value == 'w':
         position = up(position)
-    elif value== 2:
+    elif value == 's':
         position = down(position)
-    elif value== 3:
+    elif value == 'd':
         position = right(position)
-    elif value== 4:
+    elif value == 'a':
         position = left(position)
-
+    elif value =='q':
+        break
     print("Position: %r" %(position))
-    value= int(input())
-
-print("Exiting.")
+print("Exiting")
