@@ -1,3 +1,5 @@
+import os
+
 def up(p):
     p += complex(0,1)
     return p
@@ -10,6 +12,8 @@ def right(p):
 def left(p):
     p += complex(-1,0)
     return p
+def clear():
+    os.system('clear')
 
 print(""" INPUT KEY
 w - up
@@ -22,6 +26,7 @@ position = complex(1, 0)
 
 while True:
     value = input()
+    clear()
     if value == 'w':
         position = up(position)
     elif value == 's':
